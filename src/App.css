@@ -7,7 +7,7 @@
   font-family: var(--main-font);
 }
 /* 로그인 화면 ---------------------------------------------------------------- */
-.login-area{
+.login-area, .signup-area{
   background-image: url('/public/images/login.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -32,11 +32,11 @@
 
 }
 
-.login-logo{
+.login-logo, .signup-logo{
   padding-bottom: 50px;
 }
 
-.login-input{
+.login-input, .signup-input{
   width: 220px;
   border: none;
   background-color: #f8f8f8;
@@ -48,32 +48,32 @@
   transition: 0.5s;
 }
 
-.login-input:focus{
+.login-input:focus, .signup-input:focus{
   outline: none;
   box-shadow: none;
   transform: translateY(2px);
   transition: 0.5s;
 }
 
-#login-form{
+#login-form, #signup-form{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.login-wrapper h2{
+.login-wrapper h2, .signup-wrapper h2{
   align-self: start;
   color: #121f48;
 }
 
-.login-wrapper h5{
+.login-wrapper h5, .signup-wrapper h5{
   margin: 0;
   margin-bottom: 5px;
   align-self: start;
 }
 
-.login-submit{
+.login-submit, .signup-submit{
   width: 250px;
   padding: 10px 15px;
   border-radius: 5px;
@@ -85,9 +85,10 @@
   color: white;
   font-size: 15px;
   font-weight: bold;
+  cursor: pointer;
 }
 
-.login-submit:hover{
+.login-submit:hover, .signup-submit:hover{
   box-shadow: none;
   transform: translateY(2px);
   transition: 0.5s;
@@ -108,4 +109,39 @@
 .go-to-sign-up a:hover{
   text-decoration: underline;
   opacity: 0.8;
+}
+
+/* ===================================================================================================== */
+
+/* 회원가입 화면---------------------------------------------------------------------------------------------- */
+.signup-wrapper{
+  width: 380px;
+  height: 700px;
+  flex-direction: column;
+  border: 1px solid gray;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-email-confirm{
+  padding: 9px 9px;
+  align-self: flex-end;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  color: white;
+  background-color: #121f48;
+  border: none;
+  box-shadow: rgb(38, 57, 77) 0px 10px 20px -10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.signup-email-confirm:hover{
+  box-shadow: none;
+  transform: translateY(2px);
+  transition: 0.5s;
 }
