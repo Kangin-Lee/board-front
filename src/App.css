@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
 :root{
   --main-font:'Comfortaa', sans-serif;
+  --main-color:#121f48;
+  --contents-font:'Do Hyeon', sans-serif;
+  --btn-box-shadow: rgb(38, 57, 77) 0px 10px 20px -10px;
 }
 *{
   font-family: var(--main-font);
@@ -37,9 +41,9 @@
 }
 
 .login-input, .signup-input{
-  width: 220px;
+  width: 250px;
   border: none;
-  background-color: #f8f8f8;
+  background-color: #f1f0f0;
   padding: 10px 15px;
   font-size: 15px;
   border-radius: 5px;
@@ -64,7 +68,7 @@
 
 .login-wrapper h2, .signup-wrapper h2{
   align-self: start;
-  color: #121f48;
+  color: var(--main-color);
 }
 
 .login-wrapper h5, .signup-wrapper h5{
@@ -79,9 +83,9 @@
   border-radius: 5px;
   border: none;
   margin-top: 15px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: var(--btn-box-shadow);
   transition: 0.5s;
-  background-color: #121f48;
+  background-color: var(--main-color);
   color: white;
   font-size: 15px;
   font-weight: bold;
@@ -133,9 +137,9 @@
   margin-bottom: 15px;
   border-radius: 5px;
   color: white;
-  background-color: #121f48;
+  background-color: var(--main-color);
   border: none;
-  box-shadow: rgb(38, 57, 77) 0px 10px 20px -10px;
+  box-shadow: var(--btn-box-shadow);
   cursor: pointer;
   transition: 0.5s;
 }
@@ -144,4 +148,120 @@
   box-shadow: none;
   transform: translateY(2px);
   transition: 0.5s;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+/* 네비게이션 바----------------------------------------------------------------------------------------- */
+.navbar-area{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.navbar-search-logout{
+  display: flex;
+  align-items: center;
+}
+
+.navbar-search-bar{
+  background-color: #f1f0f0;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+
+.navbar-search-bar input{
+  background-color: transparent;
+  border: none;
+  padding: 5px 15px;
+  outline: none;
+}
+
+.navbar-search-bar span{
+  background-color: transparent;
+  border: none;
+  padding: 5px 15px;
+}
+
+.navbar-logout-btn{
+  /* font-size: 18px; */
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  box-shadow: var(--btn-box-shadow);
+  transition: 0.5s;
+}
+
+.navbar-logout-btn span{
+  margin-left: 5px;
+
+}
+
+.navbar-logout-btn:hover{
+  box-shadow: none;
+  transform: translateY(2px);
+  transition: 0.5s;
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+/* 게시판 목록---------------------------------------------------------------------------------------- */
+.board-contents ul{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  background-color: lightgray;
+  font-weight: bold;
+  border:2px solid #202124 ;
+  border-left: none;
+  border-right: none;
+  margin: 0;
+}
+
+.board-contents ul li{
+  font-family: var(--contents-font);
+  font-size: 20px;
+  padding: 10px 15px;
+  color: #202124;
+}
+
+.board-write-btn-area{
+  display: flex;
+  justify-content: end;
+}
+
+.board-write-btn{
+  padding: 7px 10px;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: var(--contents-font);
+  box-shadow: var(--btn-box-shadow);
+  background-color: var(--main-color);
+  color: white;
+  transition: 0.5s;
+}
+
+.board-write-btn:hover{
+  box-shadow: none;
+  transform: translateY(2px);
+  transition: 0.5s;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+/* 게시판 각 아이템 ------------------------------------------------------------------------- */
+.board-item-area{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.board-item-area div{
+  padding: 10px 15px;
+  font-family: var(--contents-font);
 }

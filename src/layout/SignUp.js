@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const onSubmit = (e) => {
@@ -8,11 +9,14 @@ const SignUp = () => {
   return (
     <div className="signup-area">
       <div className="signup-wrapper">
-        <img
-          className="signup-logo"
-          width={200}
-          src="/images/logo/logo-main.png"
-        />
+        <Link to="/">
+          <img
+            className="signup-logo"
+            width={200}
+            src="/images/logo/logo-main.png"
+          />
+        </Link>
+
         <div>
           <h2>SignUp</h2>
           <form method="post" action="" id="signup-form" onSubmit={onSubmit}>
