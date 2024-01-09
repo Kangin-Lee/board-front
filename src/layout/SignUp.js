@@ -19,7 +19,7 @@ const SignUp = () => {
 
         <div>
           <h2>SignUp</h2>
-          <form method="post" action="" id="signup-form" onSubmit={onSubmit}>
+          <form method="post" action="/signup" id="signup-form" onSubmit={onSubmit}>
             <h5>Your Name</h5>
             <input
               type="text"

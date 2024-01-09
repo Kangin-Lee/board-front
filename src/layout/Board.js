@@ -7,13 +7,21 @@ import { faPencil } from "@fortawesome/free-solid-svg-icons";
 
 const Board = () => {
   const boardContents = ["번호", "제목", "작성자", "작성일", "조회 수"];
+
   return (
     <div className="board-area">
       <Container>
         <Navbar />
         <div className="board-contents">
+          <div>
+            <button className="board-write-btn">
+              <FontAwesomeIcon icon={faPencil} /> 글쓰기
+            </button>
+            <div className="board-welcome-contents">
+              <span>관리자</span>님 환영합니다.
+            </div>
+          </div>
           <ul>
-          
             {/* <li>번호</li>
             <li>제목</li>
             <li>작성자</li>
@@ -24,12 +32,20 @@ const Board = () => {
             ))}
           </ul>
           <BoardItem />
+          <BoardItem />
+          <BoardItem />
+          <BoardItem />
+          <BoardItem />
+          <BoardItem />
+          <BoardItem />
+          <BoardItem />
+          <BoardItem />
+          <BoardItem />
         </div>
-        <div className="board-write-btn-area">
-          <button className="board-write-btn">
-            <FontAwesomeIcon icon={faPencil} /> 글쓰기
-          </button>
+        <div>
+          ---------------------페이지 네이션 부분-------------------------
         </div>
+        <div className="board-write-btn-area"></div>
       </Container>
     </div>
   );

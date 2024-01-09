@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 :root{
   --main-font:'Comfortaa', sans-serif;
   --main-color:#121f48;
-  --contents-font:'Do Hyeon', sans-serif;
+  --contents-font:'Jua', sans-serif;
   --btn-box-shadow: rgb(38, 57, 77) 0px 10px 20px -10px;
 }
 *{
@@ -207,13 +206,29 @@
 
 /* ----------------------------------------------------------------------------------------------- */
 /* 게시판 목록---------------------------------------------------------------------------------------- */
+.board-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  }
+.board-welcome-contents{
+  font-family: var(--contents-font);
+  font-size: 20px;
+}
+
+.board-welcome-contents span{
+  font-family: var(--contents-font);
+  color: #ec1946;
+}
+
 .board-contents ul{
   display: flex;
   list-style: none;
   justify-content: space-between;
   align-items: center;
   padding: 0;
-  background-color: lightgray;
+  background-color: rgb(233, 232, 232);
   font-weight: bold;
   border:2px solid #202124 ;
   border-left: none;
@@ -234,8 +249,7 @@
 }
 
 .board-write-btn{
-  padding: 7px 10px;
-  font-size: 17px;
+  padding: 7px 12px;
   border: none;
   border-radius: 5px;
   font-weight: bold;
@@ -244,6 +258,7 @@
   background-color: var(--main-color);
   color: white;
   transition: 0.5s;
+  margin-bottom: 10px;
 }
 
 .board-write-btn:hover{
@@ -252,13 +267,28 @@
   transition: 0.5s;
 }
 
+.board-contents div:first-child{
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
 /* ----------------------------------------------------------------------------------------- */
 /* 게시판 각 아이템 ------------------------------------------------------------------------- */
 .board-item-area{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 18px;
+  font-size: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.board-item-area:hover{
+  background-color: #f1f0f0;
+  transition: 0.3s;
 }
 
 .board-item-area div{

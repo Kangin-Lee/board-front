@@ -3,11 +3,11 @@ import React from "react";
 const BoardItem = () => {
   return (
     <div className="board-item-area">
-      <div>1</div>
-      <div>안녕하세요asdasfasdasd</div>
-      <div>관리자</div>
-      <div>2024-01-08</div>
-      <div>3</div>
+      <div className="board-item-num">1</div>
+      <div className="board-item-title">asdas</div>
+      <div className="board-item-writer">관리자</div>
+      <div className="board-item-date">2024-01-08</div>
+      <div className="board-item-hits">3</div>
     </div>
   );
 };
