@@ -9,7 +9,7 @@ const SignUp = () => {
   return (
     <div className="signup-area">
       <div className="signup-wrapper">
-        <Link to="/">
+        <Link to="/login">
           <img
             className="signup-logo"
             width={200}

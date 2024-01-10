@@ -23,7 +23,7 @@
 
 .login-wrapper{
   width: 380px;
-  height: 500px;
+  height: 550px;
   flex-direction: column;
   border: 1px solid gray;
   background-color: white;
@@ -68,6 +68,7 @@
 .login-wrapper h2, .signup-wrapper h2{
   align-self: start;
   color: var(--main-color);
+  margin-bottom: 30px;
 }
 
 .login-wrapper h5, .signup-wrapper h5{
@@ -294,4 +295,37 @@
 .board-item-area div{
   padding: 10px 15px;
   font-family: var(--contents-font);
+}
+
+.board-items{
+  padding: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 모달 창 ------------------------------------------------------------------- */
+.write-modal-btn{
+  margin-bottom: 10px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 15px;
+  box-shadow: var(--btn-box-shadow);
+  transition: 0.5s;
+  font-family: var(--contents-font);
+  font-size: 17px;
+  border-radius: 5px;
+  border: none;
+}
+
+.write-modal-btn:hover{
+  box-shadow: none;
+  transform: translateY(2px);
+  transition: 0.5s;
+}
+
+.modal-font{
+  font-family: var(--contents-font);
+}
+
+.modal-font-size{
+  font-size: 20px;
 }

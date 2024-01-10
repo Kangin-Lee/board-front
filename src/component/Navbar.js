@@ -4,6 +4,7 @@ import {
   faMagnifyingGlass,
   faArrowRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -18,7 +19,7 @@ const Navbar = () => {
           </div>
           <button className="navbar-logout-btn">
             <FontAwesomeIcon icon={faArrowRightFromBracket} />
-            <span>Logout</span>
+            <Link to="/login" style={{textDecoration:"none", color:"white"}}><span>Logout</span></Link>
           </button>
         </div>
       </div>
