@@ -3,6 +3,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
+import { useNavigate } from 'react-router-dom'; // 설치한 패키지
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPencil,
@@ -10,14 +11,29 @@ import {
   faArrowLeft,
   faTrashCan,
 } from "@fortawesome/free-solid-svg-icons";
+import PrivateWriteRoute from "../route/PrivateWriteRoute";
+import Login from "../layout/Login";
 
-const WriteModal = () => {
+
+const WriteModal = ({authenticate}) => {
+  
+  const navigate = useNavigate();
 
 // --------------모달창 관련------------------------------
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  
+  const handleShow = () => {
+    if(authenticate){
+      setShow(true)
+    }else{
+      alert("로그인 이후 사용이 가능합니다.")
+      navigate("/login");
+    } 
+  }
 // ------------------------------------------------------
+
+  
 
   const writeSubmit = (e) =>{
     e.preventDefault();
