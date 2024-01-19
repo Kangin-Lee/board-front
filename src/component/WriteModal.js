@@ -33,8 +33,6 @@ const WriteModal = ({authenticate}) => {
   }
 // ------------------------------------------------------
 
-  
-
   const writeSubmit = (e) =>{
     e.preventDefault();
   }

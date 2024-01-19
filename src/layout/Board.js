@@ -5,17 +5,31 @@ import BoardItem from "../component/BoardItem";
 import WriteModal from "../component/WriteModal";
 import PageNation from "../component/PageNation";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-const Board = ({authenticate}) => {
+const Board = ({ authenticate }) => {
   const boardContents = ["번호", "제목", "작성자", "작성일", "조회 수"];
 
-  const goToWriteModal = () =>{
-    console.log("aasaaa");
-  }
+  // useEffect(() => {
+  //   const fetchData = async ()=>{
+  //     try{
+  //       const response = await axios.get(
+  //         "http://localhost:8080/missionlog/maintenance"
+  //       );
+  //       setApi(response.data.api);
+  //     }catch(e){
+  //       console.log(e);
+  //     }
+  //   }
+  //   fetchData();
+  //   console.log(api);
+  // }, []);
+
   return (
     <div className="board-area">
       <Container>
-        <Navbar />
+        <Navbar authenticate={authenticate}/>
         <div className="board-contents">
           <div className="board-write-welcome">
             {/* <button className="board-write-btn">
@@ -23,7 +37,10 @@ const Board = ({authenticate}) => {
             </button> */}
 
             {/* 글 작성 버튼 */}
-            <WriteModal className="board-write-btn" authenticate={authenticate}/>
+            <WriteModal
+              className="board-write-btn"
+              authenticate={authenticate}
+            />
             <div className="board-welcome-contents">
               <span>관리자</span>님 환영합니다.
             </div>
